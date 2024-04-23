@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="528.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.view.MenuController">
+   <VBox alignment="CENTER" layoutX="50.0" layoutY="164.0" prefHeight="200.0" prefWidth="400.0" spacing="20.0">
+      <padding>
+         <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+      </padding>
+      <Label fx:id="chooseDifficultyLabel" text="%difficultyChoice" />
+      <Button onAction="#onEasyButtonClick" prefHeight="26.0" prefWidth="62.0" text="%easy" />
+      <Button mnemonicParsing="false" onAction="#onMediumButtonClick" prefHeight="26.0" prefWidth="62.0" text="%medium" />
+      <Button mnemonicParsing="false" onAction="#onHardButtonClick" prefHeight="26.0" prefWidth="62.0" text="%hard" />
+   </VBox>
+   <ButtonBar layoutX="294.0" layoutY="28.0" prefHeight="40.0" prefWidth="192.0">
+      <buttons>
+         <Button alignment="CENTER" mnemonicParsing="false" onAction="#onEnButtonClick" text="%englishVersion" />
+         <Button alignment="CENTER" mnemonicParsing="false" onAction="#onPlButtonClick" text="%polishVersion" />
+      </buttons>
+   </ButtonBar>
+   <MenuBar layoutY="1.0" prefHeight="28.0" prefWidth="500.0">
+     <menus>
+       <Menu mnemonicParsing="false" text="%file">
+         <items>
+               <MenuItem mnemonicParsing="false" onAction="#exit" text="%close" />
+           <MenuItem mnemonicParsing="false" onAction="#loadGame" text="%loadGame" />
+               <MenuItem mnemonicParsing="false" onAction="#loadGameDb" text="%loadGameFromDatabase" />
+         </items>
+       </Menu>
+       <Menu mnemonicParsing="false" text="%help">
+         <items>
+           <MenuItem mnemonicParsing="false" onAction="#displayAuthors" text="%about" />
+         </items>
+       </Menu>
+     </menus>
+   </MenuBar>
+</AnchorPane>
